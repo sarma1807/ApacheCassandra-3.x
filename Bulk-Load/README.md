@@ -26,6 +26,7 @@ CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 
 
 Create Cassandra Table :
 
+<p>
 CREATE TABLE cassdemo.usa_daily_avg_temps
 (
   state text, city text, 
@@ -33,6 +34,7 @@ CREATE TABLE cassdemo.usa_daily_avg_temps
   avgtemp decimal,
   PRIMARY KEY ((state, city), year, month, day)
 ) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ;
+</p>
 
 <hr>
 
