@@ -38,8 +38,8 @@ CREATE TABLE cassdemo.usa_daily_avg_temps <br>
 
 Bulk Load Data into Apache Cassandra using Cassandra Query Language shell :
 
-COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp)
-FROM 'usa_daily_avg_temps.csv'
-WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ;
+COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp) <br>
+FROM 'usa_daily_avg_temps.csv' <br>
+WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ; <br>
 
 <hr>
