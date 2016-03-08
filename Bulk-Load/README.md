@@ -8,7 +8,7 @@ http://academic.udayton.edu/kissock/http/Weather/default.htm
 
 <hr>
 
-"usa_daily_avg_temps.csv.gz.tar" contains a subset of data published by University of Dayton (slightly reformatted).
+"usa_daily_avg_temps.csv.gz.tar" contains a subset of data (1995 to 2015) published by University of Dayton (slightly re-formatted).
 
 "usa_daily_avg_temps_sample.csv" contains sample data.
 
