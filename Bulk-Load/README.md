@@ -24,3 +24,22 @@ CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 
 
 <hr>
 
+Create Cassandra Table :
+
+CREATE TABLE cassdemo.usa_daily_avg_temps 
+(
+  state text, city text, 
+  year smallint, month tinyint, day tinyint,
+  avgtemp decimal,
+PRIMARY KEY ((state, city), year, month, day)
+) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ;
+
+<hr>
+
+Bulk Load Data into Apache Cassandra using Cassandra Query Language shell :
+
+COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp)
+FROM 'usa_daily_avg_temps.csv'
+WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ;
+
+<hr>
