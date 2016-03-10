@@ -1,8 +1,8 @@
-Bulk Load Data into Apache Cassandra using Cassandra Query Language
+#### Bulk Load Data into Apache Cassandra using Cassandra Query Language
 
 <hr>
 
-Average daily temperature data for major US cities is published by University of Dayton.
+##### Average daily temperature data for major US cities is published by University of Dayton.
 
 http://academic.udayton.edu/kissock/http/Weather/default.htm
 
