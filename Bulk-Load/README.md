@@ -8,13 +8,13 @@ http://academic.udayton.edu/kissock/http/Weather/default.htm
 
 <hr>
 
-"usa_daily_avg_temps.csv.gz.tar" contains a subset of data (1995 to 2015) published by University of Dayton (slightly re-formatted).
+<b> "usa_daily_avg_temps.csv.gz.tar" </b> contains a subset of data (1995 to 2015) published by University of Dayton (slightly re-formatted).
 
-"usa_daily_avg_temps_sample.csv" contains sample data.
+<b> "usa_daily_avg_temps_sample.csv" </b> contains sample data.
 
 <hr>
 
-Create Cassandra Keyspace :
+### Create Cassandra Keyspace :
 
 CREATE KEYSPACE cassdemo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3} ;
 
