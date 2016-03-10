@@ -20,7 +20,7 @@ CREATE KEYSPACE cassdemo WITH replication = {'class': 'SimpleStrategy', 'replica
 
 or
 
-CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 'DC1':3, 'DC2':2} ;
+CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 'DC1':3, 'DC2':2} ; <br>
 
 <hr>
 
@@ -32,7 +32,7 @@ CREATE TABLE cassdemo.usa_daily_avg_temps <br>
   year smallint, month tinyint, day tinyint, <br>
   avgtemp decimal, <br>
   PRIMARY KEY ((state, city), year, month, day) <br>
-) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ; <br>
+) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ; <br><br>
 
 <hr>
 
@@ -40,6 +40,6 @@ CREATE TABLE cassdemo.usa_daily_avg_temps <br>
 
 COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp) <br>
 FROM 'usa_daily_avg_temps.csv' <br>
-WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ; <br>
+WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ; <br><br>
 
 <hr>
