@@ -26,7 +26,7 @@ or
 
 ### Create Cassandra Table :
 
-<code>
+```
 CREATE TABLE cassdemo.usa_daily_avg_temps
 (
   state text, city text, <br>
@@ -34,7 +34,7 @@ CREATE TABLE cassdemo.usa_daily_avg_temps
   avgtemp decimal, <br>
   PRIMARY KEY ((state, city), year, month, day) <br>
 ) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ; <br><br>
-</code>
+```
 <hr>
 
 #### Bulk Load Data into Apache Cassandra using Cassandra Query Language shell (cqlsh) :
