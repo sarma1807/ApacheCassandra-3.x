@@ -27,8 +27,8 @@ or
 ### Create Cassandra Table :
 
 <code>
-CREATE TABLE cassdemo.usa_daily_avg_temps <br>
-( <br>
+CREATE TABLE cassdemo.usa_daily_avg_temps
+(
   state text, city text, <br>
   year smallint, month tinyint, day tinyint, <br>
   avgtemp decimal, <br>
