@@ -16,12 +16,16 @@ http://academic.udayton.edu/kissock/http/Weather/default.htm
 
 ### Create Cassandra Keyspace :
 
-<code> CREATE KEYSPACE cassdemo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3} ; </code>
+```cql
+CREATE KEYSPACE cassdemo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3} ;
+```
 
 or
 
-<code> CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 'DC1':3, 'DC2':2} ; </code> <br><br>
-
+```cql
+CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 'DC1':3, 'DC2':2} ;
+```
+<br>
 <hr>
 
 ### Create Cassandra Table :
@@ -29,18 +33,21 @@ or
 ```cql
 CREATE TABLE cassdemo.usa_daily_avg_temps
 (
-  state text, city text, <br>
-  year smallint, month tinyint, day tinyint, <br>
-  avgtemp decimal, <br>
-  PRIMARY KEY ((state, city), year, month, day) <br>
-) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ; <br><br>
+  state text, city text,
+  year smallint, month tinyint, day tinyint,
+  avgtemp decimal,
+  PRIMARY KEY ((state, city), year, month, day)
+) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ;
 ```
+<br>
 <hr>
 
 #### Bulk Load Data into Apache Cassandra using Cassandra Query Language shell (cqlsh) :
-<code>
-COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp) <br>
-FROM 'usa_daily_avg_temps.csv' <br>
-WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ; <br><br>
-</code>
+
+```cql
+COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp)
+FROM 'usa_daily_avg_temps.csv'
+WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ;
+```
+<br>
 <hr>
