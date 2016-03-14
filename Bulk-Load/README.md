@@ -25,7 +25,7 @@ or
 ```cql
 CREATE KEYSPACE cassdemo WITH replication = {'class':'NetworkTopologyStrategy', 'DC1':3, 'DC2':2} ;
 ```
-<br>
+
 <hr>
 
 ### Create Cassandra Table :
@@ -39,7 +39,7 @@ CREATE TABLE cassdemo.usa_daily_avg_temps
   PRIMARY KEY ((state, city), year, month, day)
 ) WITH CLUSTERING ORDER BY (year DESC, month ASC, day ASC) ;
 ```
-<br>
+
 <hr>
 
 #### Bulk Load Data into Apache Cassandra using Cassandra Query Language shell (cqlsh) :
@@ -49,5 +49,5 @@ COPY cassdemo.usa_daily_avg_temps (state, city, month, day, year, avgtemp)
 FROM 'usa_daily_avg_temps.csv'
 WITH DELIMITER=',' AND HEADER=true AND NULL='-99' ;
 ```
-<br>
+
 <hr>
