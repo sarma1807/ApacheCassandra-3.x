@@ -26,7 +26,7 @@ or
 
 ### Create Cassandra Table :
 
-```
+```cql
 CREATE TABLE cassdemo.usa_daily_avg_temps
 (
   state text, city text, <br>
